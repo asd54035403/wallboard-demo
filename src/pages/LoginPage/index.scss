@@ -18,10 +18,11 @@
   min-width: 320px;
 
   h2 {
+    font-size: 38px;
     color: #e5e7eb;
     letter-spacing: 0.18em;
-    font-weight: 400;
-    margin-bottom: 32px;
+    font-weight: 500;
+    margin-bottom: 20px;
   }
 
   input {
@@ -58,5 +59,11 @@
       background: linear-gradient(90deg, #334155 60%, #2563eb 100%);
       box-shadow: 0 4px 16px 0 #2563eb33;
     }
+  }
+  .error-msg {
+    color: #b91c1c;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 14px;
   }
 }

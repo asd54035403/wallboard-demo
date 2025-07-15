@@ -5,13 +5,13 @@ import "./index.scss";
 const SidebarMenu = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
-    // 如有登入狀態可清除，這裡可加 localStorage.removeItem('token') 等
+    localStorage.removeItem("auth");
+
     navigate("/login");
   };
   return (
     <div className="sidebar">
       <div className="sidebar-logo">
-        {/* 這裡可放 img 或純文字LOGO */}
         <span>Wallboard</span>
       </div>
       <NavLink
