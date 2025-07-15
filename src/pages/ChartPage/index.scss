@@ -1,0 +1,19 @@
+.chart-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto; /* 置中 */
+  .gauge-block {
+    padding: 20px;
+    h2 {
+      font-size: 1.4rem;
+      font-family: "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+    }
+  }
+  .doughnut-block {
+    padding: 20px;
+  }
+}

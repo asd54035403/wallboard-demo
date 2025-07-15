@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import MonitoringPage from "./pages/MonitoringPage";
+import AgentList from "./pages/AgentList";
+import QueuePage from "./pages/QueuePage";
+import TrunkPage from "./pages/TrunkPage";
+import UrgentPage from "./pages/UrgentPage";
+import ChartPage from "./pages/ChartPage";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <Router>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<MonitoringPage />} />
+          <Route path="/monitor" element={<MonitoringPage />} />
+          <Route path="/agents" element={<AgentList />} />
+          <Route
+            path="/agent/:agentId"
+            element={<div>Agent Detail Placeholder</div>}
+          />
+          <Route path="/queue" element={<QueuePage />} />
+          <Route path="/trunk" element={<TrunkPage />} />
+          <Route path="/urgent" element={<UrgentPage />} />
+          <Route path="/chart" element={<ChartPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

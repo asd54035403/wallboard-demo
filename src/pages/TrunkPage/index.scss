@@ -1,0 +1,75 @@
+.trunk-page {
+  min-height: 100vh;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 0;
+  .trunk-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: start;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .trunk-divider {
+    border: none;
+    border-top: 1.5px solid #bbb;
+    margin: 8px 0;
+  }
+  .trunk-card {
+    box-shadow: 0 4px 24px 0 rgba(20, 24, 31, 0.22);
+    border-radius: 18px;
+    min-width: 240px;
+    max-width: 260px;
+    flex: 0 0 23%;
+    padding: 28px 20px 36px 20px;
+    margin-bottom: 12px;
+    font-family: "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    letter-spacing: 0.15em;
+    font-weight: 300;
+    position: relative;
+    overflow: visible;
+    transition: box-shadow 0.2s, background 0.2s, transform 0.18s, filter 0.18s;
+
+    &:hover {
+      box-shadow: 0 8px 32px 0 #2563eb33;
+      transform: translateY(-6px) scale(1.035);
+      filter: brightness(1.08);
+      z-index: 2;
+      &::after {
+        opacity: 1;
+        background: linear-gradient(180deg, #60a5fa 0%, #e5e7eb05 100%);
+      }
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .trunk-divider {
+      border: none;
+      border-top: 1.5px solid #334155;
+      margin: 12px 0 18px 0;
+    }
+
+    .trunk-ANI,
+    .trunk-UUI,
+    .trunk-Customer,
+    .trunk-Tag {
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+      letter-spacing: 0.12em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      word-break: break-all;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.layout-component {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background-color: #f0f0f0;
+
+  .main-content {
+    flex: 1 1 0;
+    min-height: 100vh;
+    margin-left: 180px; // 與 sidebar 寬度一致
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0 32px 48px 32px;
+    box-sizing: border-box;
+  }
+
+  .page-title-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 30px 0; // 上方 margin 改為 0
+    padding: 0 32px 0 24px; // 上下 padding 改為 0
+    height: 72px; // 固定高度
+    background: linear-gradient(90deg, #23272f 70%, #6986b8 100%);
+    box-shadow: 0 4px 24px 0 rgba(20, 24, 31, 0.18);
+    border-radius: 0 0 18px 18px; // 只保留下方圓角
+    position: relative;
+    backdrop-filter: blur(2px);
+    min-height: unset;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 48px;
+      bottom: -18px;
+      width: 2px;
+      height: 32px;
+      background: linear-gradient(180deg, #e5e7eb33 0%, #e5e7eb05 100%);
+      opacity: 0.7;
+      border-radius: 1px;
+      pointer-events: none;
+    }
+
+    .page-title-icon {
+      color: #60a5fa;
+      background: rgba(36, 54, 90, 0.18);
+      border-radius: 8px;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      transition: box-shadow 0.2s, background 0.2s;
+      box-shadow: 0 2px 8px 0 #2563eb22;
+
+      &:hover {
+        background: linear-gradient(90deg, #334155 60%, #2563eb22 100%);
+        box-shadow: 0 4px 16px 0 #2563eb33;
+      }
+    }
+
+    .page-title-text {
+      color: #e5e7eb;
+      font-size: 1.4rem;
+      font-family: "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-shadow: 0 2px 8px #0006;
+      transition: color 0.2s;
+    }
+  }
+
+  .page-content {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+}

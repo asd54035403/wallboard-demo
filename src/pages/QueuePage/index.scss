@@ -1,0 +1,85 @@
+.queue-page {
+  min-height: 100vh;
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0 0 0;
+  .queue-grid {
+    margin-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: start;
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .queue-card {
+    box-shadow: 0 4px 24px 0 rgba(20, 24, 31, 0.22);
+    border-radius: 18px;
+    min-width: 240px;
+    max-width: 260px;
+    flex: 0 0 23%;
+    padding: 28px 20px 36px 20px;
+    margin-bottom: 12px;
+    font-family: "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    letter-spacing: 0.15em;
+    font-weight: 300;
+    position: relative;
+    overflow: visible;
+    transition: box-shadow 0.2s, background 0.2s;
+    &:hover {
+      box-shadow: 0 8px 32px 0 #2563eb55;
+      transform: translateY(-6px) scale(1.035);
+      filter: brightness(1.08);
+      z-index: 2;
+    }
+    h3 {
+      font-size: 1.15rem;
+      font-weight: 400;
+      letter-spacing: 0.22em;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      // 可加 icon
+    }
+
+    .queue-callQueue {
+      font-size: 1.05rem;
+
+      margin-bottom: 8px;
+      letter-spacing: 0.12em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .queue-maxWaitTime {
+      font-size: 0.98rem;
+
+      margin-top: 10px;
+      margin-bottom: 2px;
+      letter-spacing: 0.12em;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    p {
+      margin: 0 0 4px 0;
+      font-size: 1rem;
+
+      letter-spacing: 0.12em;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    span {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 2px;
+    }
+  }
+}

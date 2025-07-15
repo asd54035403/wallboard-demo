@@ -1,0 +1,115 @@
+.sidebar {
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10px;
+    margin-bottom: 24px;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    span {
+      color: #e5e7ebcc;
+      font-size: 22px;
+      font-family: "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      letter-spacing: 0.3em;
+      font-weight: 300;
+      text-shadow: 0 2px 8px #0006;
+    }
+  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 180px;
+  background: linear-gradient(135deg, #181b20 80%, #23272f 100%);
+  box-shadow: 8px 0 32px rgba(20, 24, 31, 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 48px;
+  gap: 12px;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e5e7ebcc;
+    padding: 16px 20px 20px 28px;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "Segoe UI", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    border-radius: 5px;
+    position: relative;
+    overflow: visible;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+
+    // 雨絲效果
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 85%;
+      top: 100%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100px;
+      background: linear-gradient(180deg, #e5e7eb33 0%, #e5e7eb05 100%);
+      opacity: 0.3;
+      border-radius: 1px;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+
+    &:hover {
+      background: linear-gradient(90deg, #334155 60%, #2563eb22 100%);
+      color: #fff;
+      box-shadow: 0 2px 16px 0 #2563eb22;
+      &::after {
+        opacity: 1;
+        background: linear-gradient(180deg, #60a5fa 0%, #e5e7eb05 100%);
+      }
+    }
+
+    &.active {
+      background: linear-gradient(90deg, #2563eb 60%, #334155 100%);
+      color: #fff;
+      box-shadow: 0 4px 24px 0 #2563eb33;
+      font-weight: 400;
+      &::after {
+        opacity: 1;
+        background: linear-gradient(180deg, #60a5fa 0%, #2563eb00 100%);
+      }
+    }
+  }
+  .sidebar-logout {
+    margin-top: auto;
+    margin-bottom: 60px;
+    width: 100%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #23272f 70%, #181b20 100%);
+    color: #e5e7ebcc;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    font-weight: 400;
+    box-shadow: 0 2px 12px 0 #2563eb22;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      background: linear-gradient(90deg, #334155 60%, #2563eb22 100%);
+      color: #60a5fa;
+      box-shadow: 0 4px 16px 0 #2563eb33;
+    }
+  }
+}
