@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "./index.scss";
 import LayoutComponent from "../../components/LayoutComponent";
 
@@ -31,8 +30,6 @@ const mockUrgent = [
 ];
 
 const UrgentPage = () => {
-  const navigate = useNavigate();
-
   return (
     <LayoutComponent title="不耐等候清單">
       <div className="urgent-list-page">

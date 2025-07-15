@@ -3,10 +3,6 @@ import "./index.scss";
 import LayoutComponent from "../../components/LayoutComponent";
 import DoughnutChart from "../../components/DoughnutChart";
 const MonitoringPage = () => {
-  const [agents, setAgents] = useState([]);
-  const [groupFilter, setGroupFilter] = useState("");
-  const wsRef = useRef(null);
-
   //內線 客戶狀態
   // ACD: 通話中;
   // AVAIL: 空閑;
